@@ -5,31 +5,37 @@ source ~/.venv/bin/activate
 EXTR="--dry-run"
 EXTR="--no-dry-run"
 
-REPO="ggml-org/gemma-3-27b-it-qat-GGUF"
-FILE1="gemma-3-27b-it-qat-Q4_0.gguf"
-hf download "${REPO}" "${FILE1}" --local-dir ~/models "${EXTR}"
-
-REPO="ggml-org/InternVL3-14B-Instruct-GGUF"
-FILE1="InternVL3-14B-Instruct-Q8_0.gguf"
-hf download "${REPO}" "${FILE1}" --local-dir ~/models "${EXTR}"
-
 REPO="mradermacher/MiniMax-M2.5-REAP-172B-A10B-i1-GGUF"
-FILE1="MiniMax-M2.5-REAP-172B-A10B.i1-Q4_K_S.gguf"
-FILE2="MiniMax-M2.5-REAP-172B-A10B.i1-Q4_K_M.gguf"
+FILE1="MiniMax-M2.5-REAP-172B-A10B.i1-IQ4_XS.gguf"
 hf download "${REPO}" "${FILE1}" --local-dir ~/models "${EXTR}"
-hf download "${REPO}" "${FILE2}" --local-dir ~/models "${EXTR}"
 
-REPO="unsloth/gpt-oss-120b-GGUF"
-FILE1="UD-Q4_K_XL/gpt-oss-120b-UD-Q4_K_XL-00001-of-00002.gguf"
-FILE2="UD-Q4_K_XL/gpt-oss-120b-UD-Q4_K_XL-00002-of-00002.gguf"
-hf download "${REPO}" "${FILE1}" --local-dir ~/models "${EXTR}"
-hf download "${REPO}" "${FILE2}" --local-dir ~/models "${EXTR}"
+exit
+
+#REPO="ggml-org/gemma-3-27b-it-qat-GGUF"
+#FILE1="gemma-3-27b-it-qat-Q4_0.gguf"
+#hf download "${REPO}" "${FILE1}" --local-dir ~/models "${EXTR}"
+#
+#REPO="ggml-org/InternVL3-14B-Instruct-GGUF"
+#FILE1="InternVL3-14B-Instruct-Q8_0.gguf"
+#hf download "${REPO}" "${FILE1}" --local-dir ~/models "${EXTR}"
+#
+#REPO="mradermacher/MiniMax-M2.5-REAP-172B-A10B-i1-GGUF"
+#FILE1="MiniMax-M2.5-REAP-172B-A10B.i1-Q4_K_S.gguf"
+#FILE2="MiniMax-M2.5-REAP-172B-A10B.i1-Q4_K_M.gguf"
+#hf download "${REPO}" "${FILE1}" --local-dir ~/models "${EXTR}"
+#hf download "${REPO}" "${FILE2}" --local-dir ~/models "${EXTR}"
+#
+#REPO="unsloth/gpt-oss-120b-GGUF"
+#FILE1="UD-Q4_K_XL/gpt-oss-120b-UD-Q4_K_XL-00001-of-00002.gguf"
+#FILE2="UD-Q4_K_XL/gpt-oss-120b-UD-Q4_K_XL-00002-of-00002.gguf"
+#hf download "${REPO}" "${FILE1}" --local-dir ~/models "${EXTR}"
+#hf download "${REPO}" "${FILE2}" --local-dir ~/models "${EXTR}"
 
 REPO="ggml-org/gpt-oss-120b-GGUF"
-FILE1="gpt-oss-120b-mxfp4-00001-of-00003.gguf"
+#FILE1="gpt-oss-120b-mxfp4-00001-of-00003.gguf"
 FILE2="gpt-oss-120b-mxfp4-00002-of-00003.gguf"
 FILE3="gpt-oss-120b-mxfp4-00003-of-00003.gguf"
-hf download "${REPO}" "${FILE1}" --local-dir ~/models "${EXTR}"
+#hf download "${REPO}" "${FILE1}" --local-dir ~/models "${EXTR}"
 hf download "${REPO}" "${FILE2}" --local-dir ~/models "${EXTR}"
 hf download "${REPO}" "${FILE3}" --local-dir ~/models "${EXTR}"
 
